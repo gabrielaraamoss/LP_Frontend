@@ -45,7 +45,7 @@ class Header extends StatelessWidget {
       child: TextButton(
         onPressed: onPressed,
         style: ButtonStyle(
-            minimumSize: const MaterialStatePropertyAll(Size(250, 60)),
+            minimumSize: const MaterialStatePropertyAll(Size(200, 40)),
             backgroundColor: MaterialStatePropertyAll(color),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
@@ -53,7 +53,7 @@ class Header extends StatelessWidget {
             ))),
         child: Text(
           text,
-          style: const TextStyle(color: Colors.white, fontSize: 25),
+          style: const TextStyle(color: Colors.white, fontSize: 20),
         ),
       ),
     );

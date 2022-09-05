@@ -18,7 +18,7 @@ class InfoZone extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(bottom: 15.0),
                 child: Text(
-                  "Sabias que.....?",
+                  "¿Sabías que.....",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 35,
@@ -28,11 +28,11 @@ class InfoZone extends StatelessWidget {
               SizedBox(
                 width: 350,
                 child: Text(
-                  "Como alimento, las frutas realizan aportes a la dieta que son de suma importancia para la salud humana",
+                  "como alimento, las frutas realizan aportes a la dieta que son de suma importancia para la salud humana?",
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 17,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold),
                 ),
               )
