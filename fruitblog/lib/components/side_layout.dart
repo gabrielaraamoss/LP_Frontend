@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruitblog/main.dart';
 import 'package:fruitblog/pages/blog/blog.dart';
+import 'package:fruitblog/pages/home_page/home_page.dart';
 
 class SideLayout extends StatelessWidget {
   @override
@@ -48,7 +50,14 @@ class SideLayout extends StatelessWidget {
                   child: Column(
                 children: <Widget>[
                   MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const MyHomePage(title: 'Fresh Fruits')),
+                      );
+                    },
                     child: Text(
                       'Inicio',
                       textDirection: TextDirection.ltr,

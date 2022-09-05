@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruitblog/pages/blog/header_form.dart';
+import 'package:fruitblog/pages/home_page/home_page.dart';
 import 'package:fruitblog/components/side_layout.dart';
-import 'package:fruitblog/pages/blog/publication_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +29,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-        children: <Widget>[SideLayout(), Expanded(flex: 3, child: Text(''))]);
+    return Scaffold(
+      body: Row(children: <Widget>[
+        SideLayout(),
+        Expanded(flex: 3, child: Stack(children: [HomePage()]))
+      ]),
+    );
   }
 }
