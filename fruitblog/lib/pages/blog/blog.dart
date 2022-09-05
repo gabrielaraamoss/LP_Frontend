@@ -16,7 +16,7 @@ class _BlogPageState extends State<BlogPage> {
   Widget build(BuildContext context) {
     return Row(children: <Widget>[
       SideLayout(),
-      Expanded(flex: 3, child: Stack(children: [PublicationList()]))
+      Expanded(flex: 3, child: HeaderForm()),
     ]);
   }
 }
