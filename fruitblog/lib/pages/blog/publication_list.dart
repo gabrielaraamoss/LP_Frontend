@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruitblog/models/publication_model.dart';
-import 'package:fruitblog/publication_item.dart';
+import 'package:fruitblog/pages/blog/publication_item.dart';
 import 'package:fruitblog/api_service.dart';
 
 class PublicationList extends StatefulWidget {
