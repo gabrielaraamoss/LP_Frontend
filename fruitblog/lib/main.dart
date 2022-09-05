@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Fresh Fruits',
       theme: ThemeData(primaryColor: Colors.black),
       home: const MyHomePage(title: 'Fresh Fruits'),
     );
@@ -28,6 +28,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Scaffold(
       body: Row(children: <Widget>[
         SideLayout(),
@@ -114,5 +115,9 @@ class SideLayout extends StatelessWidget {
         ),
       ),
     );
+=======
+    return Row(
+        children: <Widget>[SideLayout(), Expanded(flex: 3, child: Text(''))]);
+>>>>>>> e6b5d8f (Reorganizando)
   }
 }
