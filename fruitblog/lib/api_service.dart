@@ -9,7 +9,7 @@ class APIService {
   static Future<List<PublicationModel>?> getPublications() async {
     Map<String, String> requestHeaders = {'Content-Type': 'application/json'};
 
-    var url = Uri.http(Config.apiURL, Config.blogURL);
+    var url = Uri.parse('http://localhost:8000/get');
     var response = await client.get(url, headers: requestHeaders);
 
     if (response.statusCode == 200) {
@@ -23,18 +23,12 @@ class APIService {
 
   static Future<bool> savePublications(
     PublicationModel model,
-    bool isEditMode,
   ) async {
     var blogURL = Config.blogURL;
-    if (isEditMode) {
-      blogURL = blogURL + "/" + model.id.toString();
-    }
-    var url = Uri.http(Config.apiURL, Config.blogURL);
-    var requestMethod = isEditMode ? "PUT" : "POST";
-    var request = http.MultipartRequest(requestMethod, url);
-    request.fields["name"] = model.name!;
-    request.fields["publication"] = model.publication!;
-
+    var url = Uri.parse('http://localhost:8000/post');
+    var request = http.MultipartRequest("POST", url);
+    request.fields["nombre"] = model.nombre!;
+    request.fields["publicacion"] = model.publicacion!;
     var response = await request.send();
     if (response.statusCode == 200) {
       return true;
@@ -45,7 +39,7 @@ class APIService {
 
   static Future<bool> deletePublication(id) async {
     Map<String, String> requestHeaders = {'Content-Type': 'application/json'};
-    var url = Uri.http(Config.apiURL, Config.blogURL + "/" + id);
+    var url = Uri.parse('http://localhost:8000/delete-posts');
     var response = await client.delete(url, headers: requestHeaders);
 
     if (response.statusCode == 200) {

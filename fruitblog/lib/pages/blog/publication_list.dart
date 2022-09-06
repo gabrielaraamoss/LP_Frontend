@@ -15,25 +15,12 @@ class _PublicationListState extends State<PublicationList> {
       List<PublicationModel>.empty(growable: true);
 
   void initState() {
-    // loadPublications();
-    publications.add(PublicationModel(
-        id: "1",
-        name: "Gabriela Ramos",
-        publication: "Mi primera publicación"));
-
-    publications.add(PublicationModel(
-        id: "2",
-        name: "Gabriela Ramos",
-        publication: "Mi segunda publicación"));
-    publications.add(PublicationModel(
-        id: "3",
-        name: "Gabriela Ramos",
-        publication: "Mi tercera publicación"));
+    loadPublications();
   }
 
   @override
   Widget build(BuildContext context) {
-    return publicationList(publications);
+    return loadPublications();
   }
 
   Widget publicationList(publications) {

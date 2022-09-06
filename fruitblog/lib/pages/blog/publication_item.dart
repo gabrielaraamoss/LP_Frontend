@@ -31,19 +31,20 @@ class PublicationItem extends StatelessWidget {
                             'https://cdn-icons-png.flaticon.com/512/1625/1625048.png'),
                       ),
                     ),
-                    Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 20, 50, 0),
+                    Expanded(
                         child: Container(
-                          width: 250,
-                          child: Text(model!.name!,
-                              style: GoogleFonts.lato(
-                                textStyle:
-                                    Theme.of(context).textTheme.headline4,
-                                fontSize: 30,
-                                fontWeight: FontWeight.w700,
-                                fontStyle: FontStyle.italic,
-                              )),
-                        )),
+                            width: 200,
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(20, 20, 30, 0),
+                              child: Text("${model?.nombre}",
+                                  style: GoogleFonts.lato(
+                                    textStyle:
+                                        Theme.of(context).textTheme.headline4,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.w700,
+                                    fontStyle: FontStyle.italic,
+                                  )),
+                            ))),
                     Material(
                       color: const Color.fromARGB(255, 170, 216, 216),
                       child: IconButton(
@@ -66,11 +67,11 @@ class PublicationItem extends StatelessWidget {
                   height: 100,
                   child: Padding(
                       padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                      child: Text("${model!.publication}",
+                      child: Text("${model?.publicacion}",
                           style: TextStyle(
                               color: Color.fromARGB(199, 3, 3, 3),
                               decoration: TextDecoration.none,
-                              fontSize: 15))),
+                              fontSize: 10))),
                 )))
               ],
             )),

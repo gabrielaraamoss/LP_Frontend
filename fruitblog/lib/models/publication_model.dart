@@ -2,23 +2,23 @@ List<PublicationModel> publicationsFromJson(dynamic str) =>
     List<PublicationModel>.from((str).map((x) => PublicationModel.fromJson(x)));
 
 class PublicationModel {
-  late String? id;
-  late String? name;
-  late String? publication;
+  late String? nombre;
+  late String? fecha;
+  late String? publicacion;
 
-  PublicationModel({this.id, this.name, this.publication});
+  PublicationModel({this.nombre, this.fecha, this.publicacion});
 
   PublicationModel.fromJson(Map<String, dynamic> json) {
-    id = json["id"];
-    name = json["name"];
-    publication = json["publication"];
+    nombre = json["nombre"];
+    fecha = json["fecha"];
+    publicacion = json["publicacion"];
   }
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
-    _data["id"] = id;
-    _data["name"] = name;
-    _data["publication"] = publication;
+    _data["nombre"] = nombre;
+    _data["fecha"] = fecha;
+    _data["publicacion"] = publicacion;
 
     return _data;
   }
