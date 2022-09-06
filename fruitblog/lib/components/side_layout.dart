@@ -87,29 +87,6 @@ class SideLayout extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 50),
-                  MaterialButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Producto',
-                      textDirection: TextDirection.ltr,
-                      style: TextStyle(
-                          color: Color.fromARGB(223, 97, 97, 93),
-                          decoration: TextDecoration.none,
-                          fontSize: 30),
-                    ),
-                  ),
-                  SizedBox(height: 50),
-                  MaterialButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Contacto',
-                      textDirection: TextDirection.ltr,
-                      style: TextStyle(
-                          color: Color.fromARGB(223, 97, 97, 93),
-                          decoration: TextDecoration.none,
-                          fontSize: 30),
-                    ),
-                  ),
                 ],
               ))
             ],
